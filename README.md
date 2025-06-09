@@ -9,14 +9,9 @@
   
 ## Quraşdırma və İstifadəsi
 
-1. GitHub üzerindeki `PhotoConverter.exe` dosyasını bilgisayarınıza indirin.
-2. Dosyayı çift tıklayarak çalıştırın – kurulum gerekmez.
-3. Açılan arayüz üzerinden dönüştürmek istediğiniz fotoğrafı seçin ve hedef formatı belirtin.
-
-## Gereksinimler
-
-- Windows işletim sistemi (7 ve üzeri önerilir)
-- .NET Framework 4.5 veya üzeri
+1. GitHubda yerləşdirilmiş `PhotoConverter.exe` faylını komputerinizə yükləyin.
+2. Fayla üstündən 2 dəfə basaraq proqramı aça bilərsiniz. Proqram heç bir quraşdırmağa ehtiyac duymur.
+3. Açılan proqram pəncərəsindən formatını çevirmək istədiyiniz şəkili seçin sonra isə çevirmək istədiyiniz formatı seçin və çevir düyməsinə basın. Çevirmə əməliyyatı başa çatdıqdan sonra isə çevrilmiş şəkili komputerinizə yükləyə bilərsiniz.
 
 ## Lisans
 
