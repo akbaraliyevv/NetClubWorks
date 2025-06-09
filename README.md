@@ -13,13 +13,12 @@
 2. Fayla üstündən 2 dəfə basaraq proqramı aça bilərsiniz. Proqram heç bir quraşdırmağa ehtiyac duymur.
 3. Açılan proqram pəncərəsindən formatını çevirmək istədiyiniz şəkili seçin sonra isə çevirmək istədiyiniz formatı seçin və çevir düyməsinə basın. Çevirmə əməliyyatı başa çatdıqdan sonra isə çevrilmiş şəkili komputerinizə yükləyə bilərsiniz.
 
-## Lisans
+## Lisenziya
 
-Bu proje açık kaynak değildir / MIT lisansı ile lisanslanmıştır.  
-(Lisans türünü belirtmediysen burayı "MIT lisansı ile lisanslanmıştır." şeklinde bırakabilirim.)
+- Lisenziya almağı tam olaraq bilmədiyimdən lisenziya almadım amma bu proqram üçün çoxda lisenziyaya ehtiyac olacağını düşünmürəm.
+  
+## Layihə rəhbəri
 
-## Geliştirici
-
-- **[Adınız Soyadınız]**
-- GitHub: [https://github.com/kullaniciAdi](https://github.com/kullaniciAdi)
-- Geri bildirim veya önerileriniz için lütfen bir Issue oluşturun.
+- **[Əkbər Əliyev]**
+- GitHub: [https://github.com/akbaraliyevv](https://github.com/akbaraliyevv)
+- Geri geri dönüş və ya təklifləriniz üçün bir İssue yaradın.
