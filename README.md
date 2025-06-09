@@ -1,6 +1,8 @@
 # Photo Converter
 
 **Photo Converter**, istifadəçilərə şəkili bir formatdan digər formatlara (png, jpeg, tiff, gif, bmp) çevirməsinə kömək edən bir proqramdır. Bu proqram **C# və Windows forms**-dan istifadə edilirək hazırlanmışdır.
+- Layihəyə başlanma tarixi: **06.06.2025**
+- Layihənin bitiş tarixi: **09.06.2025**
 
 ## Xüsusiyyətləri
 
