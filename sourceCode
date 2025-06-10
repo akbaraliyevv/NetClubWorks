@@ -1,0 +1,175 @@
+```python
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.IO;
+using System.Linq;
+using System.Security.Cryptography;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Window;
+
+namespace PhotoConverter
+{
+    public partial class MainForm : Form
+    {
+        public MainForm()
+        {
+            InitializeComponent();
+        }
+        private void button1_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog ofd = new OpenFileDialog();
+            ofd.ShowDialog();
+            string picture;
+            picture = ofd.FileName;
+            try
+            {
+                pictureBox1.Image = Image.FromFile(picture);
+                button2.Enabled = true;
+                comboBox1.Enabled = true;
+            }
+            catch
+            {
+                return;
+            }
+        }
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            
+        }
+        private void button2_Click(object sender, EventArgs e)
+        { 
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                if ((string)comboBox1.SelectedItem == "PNG")
+                {
+                    saveFileDialog1.Filter = "PNG|*.png";
+                    button3.Enabled = false;
+                    timer1.Start();
+                }
+                if ((string)comboBox1.SelectedItem == "JPEG")
+                {
+                    saveFileDialog1.Filter = "JPEG|*.jpeg";
+                    button3.Enabled = false;
+                    timer1.Start();
+                }
+                if ((string)comboBox1.SelectedItem == "TIFF")
+                {
+                    saveFileDialog1.Filter = "TIFF|*.tiff";
+                    button3.Enabled = false;
+                    timer1.Start();
+                }
+                if ((string)comboBox1.SelectedItem == "GIF")
+                {
+                    saveFileDialog1.Filter = "GIF|*.gif";
+                    button3.Enabled = false;
+                    timer1.Start();
+                }
+                if ((string)comboBox1.SelectedItem == "BMP")
+                {
+                    saveFileDialog1.Filter = "BMP|*.bmp";
+                    button3.Enabled = false;
+                    timer1.Start();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (saveFileDialog1.Filter == "PNG|*.png")
+            {
+                if (saveFileDialog1.ShowDialog() != System.Windows.Forms.DialogResult.Cancel)
+                {
+                    pictureBox1.Image.Save(saveFileDialog1.FileName, System.Drawing.Imaging.ImageFormat.Png);
+                }
+            }
+            if (saveFileDialog1.Filter == "JPEG|*.jpeg")
+            {
+                if (saveFileDialog1.ShowDialog() != System.Windows.Forms.DialogResult.Cancel)
+                {
+                    pictureBox1.Image.Save(saveFileDialog1.FileName, System.Drawing.Imaging.ImageFormat.Jpeg);
+                }
+            }
+            if (saveFileDialog1.Filter == "TIFF|*.tiff")
+            {
+                if (saveFileDialog1.ShowDialog() != System.Windows.Forms.DialogResult.Cancel)
+                {
+                    pictureBox1.Image.Save(saveFileDialog1.FileName, System.Drawing.Imaging.ImageFormat.Tiff);
+                }
+            }
+            if (saveFileDialog1.Filter == "GIF|*.gif")
+            {
+                if (saveFileDialog1.ShowDialog() != System.Windows.Forms.DialogResult.Cancel)
+                {
+                    pictureBox1.Image.Save(saveFileDialog1.FileName, System.Drawing.Imaging.ImageFormat.Gif);
+                }
+            }
+            if (saveFileDialog1.Filter == "BMP|*.bmp")
+            {
+                if (saveFileDialog1.ShowDialog() != System.Windows.Forms.DialogResult.Cancel)
+                {
+                    pictureBox1.Image.Save(saveFileDialog1.FileName, System.Drawing.Imaging.ImageFormat.Bmp);
+                }
+            }
+        }        
+        private void progressBar1_Click(object sender, EventArgs e)
+        {
+        }
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+      
+            if (progressBar1.Value < 100)
+            {
+                label2.Visible = true;
+                progressBar1.Visible = true;
+                loading.Visible = true;
+                progressBar1.Value += 5;
+                label2.Text = "Şəkil hazırlanır...";
+                loading.Text = progressBar1.Value.ToString() + "%";
+            }
+            else
+            {
+                loading.Visible = false;
+                progressBar1.Visible = false;
+                label2.Location = new Point(80, 265);
+                label2.Text = "Şəkili yükləyə bilərsiniz.";
+                progressBar1.Value = 0;
+                loading.Text = progressBar1.Value.ToString() + "%";
+                timer1.Stop();
+                button3.Enabled = true;
+                button2.Enabled = false;
+            }
+        }
+
+        private void ComboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+        }
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string secFormat = comboBox1.SelectedItem as string;
+            button2.Enabled = true;
+        }
+    }
+}
