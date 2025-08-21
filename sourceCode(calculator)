@@ -1,0 +1,18 @@
+```python 
+print("Calculator")
+a = int(input("Ilk ededi daxil edin: "))
+b = int(input("Ikinci ededi daxil edin: "))
+c = input("emeliyyat secin: +, -, *, /: ")
+
+if c == "+":
+    print("Netice:", a + b)
+elif c == "-":
+    print("Netice:", a - b)
+elif c == "*":
+    print("Netice:", a * b)
+elif c == "/":
+    if b != 0:
+        print("Netice:", a / b)
+    else:
+        print("Sifira bolme olmaz!")
+
